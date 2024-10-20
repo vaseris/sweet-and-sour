@@ -1,0 +1,7 @@
+localhost:443 {
+	root * /var/www/html/docs
+	tls internal
+	encode zstd gzip
+	try_files {path}.html
+	file_server
+}

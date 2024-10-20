@@ -1,0 +1,16 @@
+services:
+    caddy:
+        image: caddy:2.7.6-alpine
+        restart: unless-stopped
+        cap_add:
+            - NET_ADMIN
+        ports:
+            - '443:443'
+            - '443:443/udp'
+            - '9000:9000'
+            - '9000:9000/udp'
+        volumes:
+            - .:/var/www/html
+            - ./.docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+            - ./.docker/caddy/data:/data
+        command: ["caddy", "run", "--watch", "--config", "/etc/caddy/Caddyfile"]
