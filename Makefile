@@ -1,5 +1,5 @@
 up:
-	@cp --update=none compose.yml.dist compose.yml
+	@cp --update=none compose.yaml.dist compose.yaml
 	@docker compose pull
 	@docker compose build
 	@docker compose up -d --force-recreate
