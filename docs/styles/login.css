@@ -17,3 +17,15 @@ h1{
     font-weight: 100;
     font-size: 24px;
 }
+#loginbox{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 230px;
+    border: 1px solid #d8dee2 ;
+    border-radius: 3%;
+    padding: 20px;
+    font-size: 15px;
+    background-color: #555;
+}
