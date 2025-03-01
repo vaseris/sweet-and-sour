@@ -10,3 +10,10 @@ header img{
     top: 25;
     position: absolute;
 }
+h1{
+    text-align: center;
+    display: block;
+    margin: 4cm 0 1em;
+    font-weight: 100;
+    font-size: 24px;
+}
