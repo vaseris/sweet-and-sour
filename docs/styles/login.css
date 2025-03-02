@@ -63,3 +63,18 @@ font-weight: 600;
 height: 34px;
 border-radius: 0.25em
 }
+#new{
+    width: 300px;
+    height: 53px;
+    position: absolute;
+    border: 1px solid #d8dee2
+    background-color: transparent;
+    left: 50%;
+    top: 120%;
+    transform: translate(-50% , -50%)
+    margin-top: 16px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 3%;
+}
