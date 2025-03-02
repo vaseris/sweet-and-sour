@@ -50,3 +50,16 @@ label p a {
     margin-bottom: 15px;
     display: block;
 }
+input[type="submit"]{
+widht: 100%;
+border: none;
+background-color: 2Ba745;
+background-image: linear-gradient(-180deg, #34d058 0%, 28a745 90%);;
+color: #555
+display: block;
+margin-top: 20px;
+font-size: 40px;
+font-weight: 600;
+height: 34px;
+border-radius: 0.25em
+}
