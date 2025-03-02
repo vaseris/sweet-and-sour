@@ -77,4 +77,31 @@ border-radius: 0.25em;
     padding: 5px 20px;
     text-align: center;
     border-radius: 3%;
+    font-weight: 100;
+}
+#new a{
+    text-decoration: none;
+}
+#new a:hover{
+    text-decoration: underline;
+}
+ul li{
+    display: inline;
+    list-style: none;
+}
+#list{
+    width: 300px;
+    height: 53px;
+    position: absolute;
+    top: 135%;
+    width: 100%;
+    left: 50%;
+    transform:translate(-50%);
+    margin-top: 16px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    text-align: left;
+}
+.m3{
+    margin-right: 20px;
 }
