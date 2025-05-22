@@ -6,32 +6,40 @@
     <title>Sweet en Sour</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
+
+<header class="container text-center py-4">
     <h1>Sweet en Sour</h1>
-    <a href="https://vaseris.nl">Naar Vaseris</a>
-    <nav>
-        <ul>
-            <li><a href="/snoepjes" class="btn btn-danger">Producten</a></li>
-            <li><a href="/over-ons" class="btn btn-primary">Over ons</a></li>
-            <li><a href="/contact" class="btn btn-warning">Bestelling plaatsen</a></li>
-            <li><a href="/openingsdagen" class="btn btn-dark">Openingsdagen</a></li>
-            <li><a href="/login" class="btn btn-secondary">Aanmelden</a></li>
-        </ul>
-    </nav>
+    <a href="https://vaseris.nl" class="btn btn-link">Naar Vaseris</a>
 </header>
 
-<main>
+<nav class="container">
+    <ul class="nav justify-content-center">
+        <li class="nav-item"><a href="/snoepjes" class="btn btn-danger">Producten</a></li>
+        <li class="nav-item"><a href="/over-ons" class="btn btn-primary">Over ons</a></li>
+        <li class="nav-item"><a href="/contact" class="btn btn-warning">Bestelling plaatsen</a></li>
+        <li class="nav-item"><a href="/openingsdagen" class="btn btn-dark">Openingsdagen</a></li>
+        <li class="nav-item"><a href="/login" class="btn btn-secondary">Aanmelden</a></li>
+    </ul>
+</nav>
+
+<main class="container text-center my-5">
     <section class="cta">
         <h2>Neem vandaag nog contact op!</h2>
         <p>Heb je vragen of wil je iets bestellen? Neem dan gerust contact met ons op.</p>
     </section>
 </main>
 
-<footer>
+<footer class="container text-center py-3">
     <p>&copy; <script>document.write(new Date().getFullYear());</script> Sweet en Sour</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
 </footer>
 
 <script src="script.js"></script>
