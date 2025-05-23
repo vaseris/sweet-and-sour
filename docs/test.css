@@ -34,11 +34,20 @@
 /* Werkende achtergrond van de hele pagina */
 .gradient-background {
     background: linear-gradient(to right, #ff0000, #0000ff); /* Van rood naar blauw */
-    min-height: 100vh; /* Hele viewport bedekken */
-    width: 100%; /* Zorgt ervoor dat de achtergrond de volledige breedte heeft */
-    position: fixed; /* Zorgt ervoor dat de achtergrond blijft staan */
+    height: 100vh; /* Hele viewport bedekken */
+    width: 100vw; /* Hele breedte bedekken */
+    position: absolute; /* Voorkomt dat andere elementen de achtergrond overschrijven */
     top: 0;
     left: 0;
+    z-index: -1; /* Zorgt ervoor dat de achtergrond achter de content blijft */
+}
+
+/* Zorg dat de container alle content bevat */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; /* Voorkomt horizontale scroll */
 }
 
 /* Verbeterde footer */
@@ -46,4 +55,3 @@ footer p {
     font-size: 14px;
     color: #fff;
 }
-
