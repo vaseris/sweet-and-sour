@@ -31,16 +31,18 @@
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Achtergrond van de hele pagina */
+/* Werkende achtergrond van de hele pagina */
 .gradient-background {
-    background: linear-gradient(to right, red, blue); /* Van rood naar blauw */
+    background: linear-gradient(to right, #ff0000, #0000ff); /* Van rood naar blauw */
     min-height: 100vh; /* Hele viewport bedekken */
+    width: 100%; /* Zorgt ervoor dat de achtergrond de volledige breedte heeft */
+    position: fixed; /* Zorgt ervoor dat de achtergrond blijft staan */
+    top: 0;
+    left: 0;
 }
 
 /* Verbeterde footer */
 footer p {
-    text-align: center;
     font-size: 14px;
-    color: #666;
+    color: #fff;
 }
-
