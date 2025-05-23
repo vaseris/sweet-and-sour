@@ -36,7 +36,7 @@
     background: linear-gradient(to right, #ff0000, #0000ff); /* Van rood naar blauw */
     height: 100vh; /* Hele viewport bedekken */
     width: 100vw; /* Hele breedte bedekken */
-    position: absolute; /* Voorkomt dat andere elementen de achtergrond overschrijven */
+    position: fixed; /* Achtergrond blijft staan */
     top: 0;
     left: 0;
     z-index: -1; /* Zorgt ervoor dat de achtergrond achter de content blijft */
