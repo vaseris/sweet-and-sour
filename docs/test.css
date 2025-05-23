@@ -1,54 +1,39 @@
-/* Algemene stijl voor alle knoppen */
+/* Algemene knopstijl */
 .btn {
     padding: 12px 20px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 8px; /* Afgeronde hoeken */
-    transition: all 0.3s ease-in-out; /* Gladde overgangseffecten */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15); /* Subtiele schaduw */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
     border: none;
-}
-
-/* Gradient-achtergrond voor een moderne look */
-.btn-danger {
-    background: linear-gradient(45deg, #ff4d4d, #c40000);
     color: white;
+    display: inline-block;
+    text-align: center;
 }
 
-.btn-primary {
-    background: linear-gradient(45deg, #007bff, #004d99);
-    color: white;
-}
+/* Gradient achtergronden */
+.btn-danger { background: linear-gradient(45deg, #ff4d4d, #c40000); }
+.btn-primary { background: linear-gradient(45deg, #007bff, #004d99); }
+.btn-warning { background: linear-gradient(45deg, #ffc107, #ff8c00); }
+.btn-dark { background: linear-gradient(45deg, #343a40, #1d1f21); }
+.btn-secondary { background: linear-gradient(45deg, #6c757d, #4a525a); }
+.btn-purple { background: linear-gradient(45deg, #6a0dad, #4a0072); }
 
-.btn-warning {
-    background: linear-gradient(45deg, #ffc107, #ff8c00);
-    color: white;
-}
-
-.btn-dark {
-    background: linear-gradient(45deg, #343a40, #1d1f21);
-    color: white;
-}
-
-.btn-secondary {
-    background: linear-gradient(45deg, #6c757d, #4a525a);
-    color: white;
-}
-
-/* Speciale stijl voor Vaseris-knop (paars) */
-.btn-purple {
-    background: linear-gradient(45deg, #6a0dad, #4a0072);
-    color: white;
-}
-
-/* Hover-effect: lichte gloed en vergroting */
+/* Hover- en actief-effecten */
 .btn:hover {
     transform: scale(1.07);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Actief-effect wanneer ingedrukt */
 .btn:active {
     transform: scale(1);
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Verbeterde footer */
+footer p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
 }
