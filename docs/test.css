@@ -31,9 +31,16 @@
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Achtergrond van de hele pagina */
+.gradient-background {
+    background: linear-gradient(to right, red, blue); /* Van rood naar blauw */
+    min-height: 100vh; /* Hele viewport bedekken */
+}
+
 /* Verbeterde footer */
 footer p {
     text-align: center;
     font-size: 14px;
     color: #666;
 }
+
