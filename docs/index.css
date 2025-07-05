@@ -1,4 +1,4 @@
-/* 🌈 Neon pastel achtergrond */
+/* 🌈 Achtergrond met lichte neon pastel tinten */
 body {
   margin: 0;
   padding: 0;
@@ -8,34 +8,28 @@ body {
   color: white;
 }
 
-/* 📦 Container achter knoppen */
+/* ☀️ Container voor knoppen met lichte achtergrond en zonlicht */
 .button-container {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
   border-radius: 12px;
+  box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2); /* alsof licht van rechtsboven komt */
 }
 
-/* 🧁 Knopstijl met paars en glow */
+/* 🧁 Stijl voor gekleurde knoppen */
 .custom-btn {
   font-size: 1.2rem;
   font-weight: 600;
-  background-color: white;
-  color: #8000c0 !important; /* helder paars */
-  border: none;
-  box-shadow: 0 0 10px rgba(128, 0, 192, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 10px 20px;
   border-radius: 8px;
+  border: none;
+  color: #8000c0 !important; /* paars lettertype */
+  background-color: white;
+  box-shadow: -6px 6px 12px rgba(255, 255, 255, 0.4); /* schaduw naar linksonder */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 💜 Hover glow en bounce effect */
-.custom-btn:hover {
-  animation: bounce 0.6s ease infinite;
-  box-shadow: 0 0 20px rgba(128, 0, 192, 0.6);
-  transform: translateY(-4px);
-}
-
-/* 🏀 Bounce animatie */
+/* 💃 Bounce animatie */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -43,4 +37,22 @@ body {
   50% {
     transform: translateY(-8px);
   }
+}
+
+.custom-btn:hover {
+  animation: bounce 0.6s ease infinite;
+  box-shadow: -6px 6px 18px rgba(255, 255, 255, 0.5); /* iets sterkere schaduw bij hover */
+  transform: translateY(-4px);
+}
+
+/* 📦 Spacing tussen knoppen */
+.nav-item {
+  margin-bottom: 12px;
+}
+
+/* ☀️ Header en footer ook met zonlicht */
+header, footer {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: -6px 6px 20px rgba(255, 255, 255, 0.2);
 }
