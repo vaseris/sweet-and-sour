@@ -71,3 +71,25 @@ header, footer {
   border-radius: 10px;
   box-shadow: -6px 6px 20px rgba(255, 255, 255, 0.2);
 }
+
+/* 🌞 Zonnetje zichtbaar in de hoek */
+.zonnetje {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #FFD700, #FFA500);
+  border-radius: 50%;
+  z-index: 9999;
+  box-shadow: 0 0 30px rgba(255, 200, 0, 0.7),
+              0 0 60px rgba(255, 200, 0, 0.4);
+  animation: draai 6s linear infinite;
+}
+
+/* ☀️ Draaiend effect */
+@keyframes draai {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
