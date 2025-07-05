@@ -1,4 +1,4 @@
-/* 🌈 Achtergrond met pastel neon gradient */
+/* 🌈 Neon pastel achtergrond */
 body {
   margin: 0;
   padding: 0;
@@ -7,25 +7,34 @@ body {
   font-family: 'Lilita One', cursive;
   color: white;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-/* ☀️ Zon-styling als cirkel met stralen */
+/* 🌞 Zonnetje dat zwenkt */
 .sun {
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle at center, #FFD700, #FFA500);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #FFD700, #FFA500);
   border-radius: 50%;
-  box-shadow:
-    -10px 10px 40px rgba(255, 200, 0, 0.4),
-    0 0 50px rgba(255, 215, 0, 0.5);
-  z-index: 100;
+  box-shadow: 0 0 40px rgba(255, 223, 0, 0.8),
+              -10px 10px 30px rgba(255, 200, 0, 0.5);
+  z-index: 1000;
+  animation: swingSun 4s ease-in-out infinite;
 }
 
-/* 🔳 Container achter de knoppen */
+/* 🔄 Zwenk-animatie */
+@keyframes swingSun {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* 📦 Container achter knoppen */
 .button-container {
   background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
@@ -33,12 +42,7 @@ body {
   box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* 📦 Afstand tussen knoppen */
-.nav-item {
-  margin-bottom: 12px;
-}
-
-/* 🧁 Knoppenstijl: paars tekst + kleur */
+/* 🧁 Knoppenstijl */
 .custom-btn {
   font-size: 1.2rem;
   font-weight: 600;
@@ -46,27 +50,28 @@ body {
   border-radius: 8px;
   border: none;
   color: #8000c0 !important;
-  box-shadow: -6px 6px 12px rgba(255, 255, 255, 0.3);
+  background-color: white;
+  box-shadow: -6px 6px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🌞 Zonlicht bounce-effect bij hover */
+/* 🌞 Bounce animatie bij hover */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
 }
 
 .custom-btn:hover {
   animation: bounce 0.6s ease infinite;
-  box-shadow: -6px 6px 18px rgba(255, 255, 255, 0.5);
+  box-shadow: -6px 6px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-4px);
 }
 
-/* 🧼 Header & Footer met zonlichtschaduw */
+/* 🧼 Header & Footer styling */
 header, footer {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
