@@ -1,9 +1,9 @@
-/* 🌈 Achtergrond */
+/* 🌈 Achtergrond met lichtere tinten */
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(to bottom left, #FF5EDF, #3DF5FF);
+  background: linear-gradient(to bottom left, #FF85EC, #A3F7FF);
   font-family: Arial, sans-serif;
   color: white;
 }
@@ -27,7 +27,7 @@ body {
   font-weight: bold;
 }
 
-/* 🧼 Footer & Header */
+/* 🧼 Header & Footer */
 header, footer {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
