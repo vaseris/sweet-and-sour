@@ -1,4 +1,4 @@
-/* 🌈 Neon pastel achtergrond */
+/* 🌈 Achtergrond */
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 
-/* 🌞 Zonnetje dat zwenkt */
+/* 🌞 Zonnetje */
 .sun {
   position: fixed;
   top: 20px;
@@ -25,16 +25,55 @@ body {
   animation: swingSun 4s ease-in-out infinite;
 }
 
-/* 🔄 Zwenk-animatie */
+/* 🔄 Zwenkanimatie */
 @keyframes swingSun {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(4deg); }
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
   50% { transform: rotate(0deg); }
-  75% { transform: rotate(-4deg); }
-  100% { transform: rotate(0deg); }
+  75% { transform: rotate(-3deg); }
 }
 
-/* 📦 Container achter knoppen */
+/* 💥 Lava bubbels */
+.bubble {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #FFEA00;
+  border-radius: 50%;
+  animation: popBubble 5s infinite ease-out;
+  opacity: 0;
+}
+
+/* 🌋 Bubbelanimatie: stijgen + poppen */
+@keyframes popBubble {
+  0% {
+    transform: scale(0.8) translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) translate(-30px, 40px);
+  }
+  70% {
+    transform: scale(0.6) translate(-60px, 80px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translate(-80px, 100px);
+    opacity: 0;
+  }
+}
+
+/* 🎯 Individuele bubbels */
+.bubble1 { top: 20px; left: -10px; animation-delay: 0s; }
+.bubble2 { top: 10px; left: 80px; animation-delay: 1s; }
+.bubble3 { top: 60px; left: 40px; animation-delay: 2s; }
+.bubble4 { top: 30px; left: 20px; animation-delay: 3s; }
+.bubble5 { top: 45px; left: 70px; animation-delay: 4s; }
+
+/* 📦 Knoppen-container */
 .button-container {
   background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
@@ -42,7 +81,7 @@ body {
   box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* 🧁 Knoppenstijl */
+/* 🧁 Knopstijl */
 .custom-btn {
   font-size: 1.2rem;
   font-weight: 600;
@@ -55,14 +94,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🌞 Bounce animatie bij hover */
+/* 🌞 Bounce bij hover */
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 .custom-btn:hover {
@@ -71,7 +106,7 @@ body {
   transform: translateY(-4px);
 }
 
-/* 🧼 Header & Footer styling */
+/* 🧼 Header & Footer */
 header, footer {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
