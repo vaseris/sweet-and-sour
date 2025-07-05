@@ -1,4 +1,4 @@
-/* 🌈 Achtergrond met lichte neon pastel tinten */
+\/* 🌈 Achtergrond met pastel neon gradient */
 body {
   margin: 0;
   padding: 0;
@@ -6,30 +6,51 @@ body {
   background: linear-gradient(to bottom left, #FFB1F0, #C2F9FF);
   font-family: 'Lilita One', cursive;
   color: white;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* ☀️ Container voor knoppen met lichte achtergrond en zonlicht */
+/* ☀️ Zon-styling als cirkel met stralen */
+.sun {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at center, #FFD700, #FFA500);
+  border-radius: 50%;
+  box-shadow:
+    -10px 10px 40px rgba(255, 200, 0, 0.4),
+    0 0 50px rgba(255, 215, 0, 0.5);
+  z-index: 100;
+}
+
+/* 🔳 Container achter de knoppen */
 .button-container {
   background-color: rgba(255, 255, 255, 0.15);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2); /* alsof licht van rechtsboven komt */
+  box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* 🧁 Stijl voor gekleurde knoppen */
+/* 📦 Afstand tussen knoppen */
+.nav-item {
+  margin-bottom: 12px;
+}
+
+/* 🧁 Knoppenstijl: paars tekst + kleur */
 .custom-btn {
   font-size: 1.2rem;
   font-weight: 600;
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
-  color: #8000c0 !important; /* paars lettertype */
-  background-color: white;
-  box-shadow: -6px 6px 12px rgba(255, 255, 255, 0.4); /* schaduw naar linksonder */
+  color: #8000c0 !important;
+  box-shadow: -6px 6px 12px rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 💃 Bounce animatie */
+/* 🌞 Zonlicht bounce-effect bij hover */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -41,16 +62,11 @@ body {
 
 .custom-btn:hover {
   animation: bounce 0.6s ease infinite;
-  box-shadow: -6px 6px 18px rgba(255, 255, 255, 0.5); /* iets sterkere schaduw bij hover */
+  box-shadow: -6px 6px 18px rgba(255, 255, 255, 0.5);
   transform: translateY(-4px);
 }
 
-/* 📦 Spacing tussen knoppen */
-.nav-item {
-  margin-bottom: 12px;
-}
-
-/* ☀️ Header en footer ook met zonlicht */
+/* 🧼 Header & Footer met zonlichtschaduw */
 header, footer {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
