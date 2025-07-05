@@ -1,4 +1,4 @@
-/* 🎨 Diagonale gradient achtergrond in pastel neonstijl */
+/* 🌈 Achtergrond met lichtere neon tinten */
 body {
   margin: 0;
   padding: 0;
@@ -8,26 +8,47 @@ body {
   color: white;
 }
 
-/* 🔳 Achtergrond achter knoppen */
+/* 🔳 Achtergrond voor de knoppencontainer */
 .button-container {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
 }
 
-/* 🧁 Knop styling: paars grotere tekst */
-.custom-btn {
-  font-size: 1.2rem;
-  color: purple !important;
-  font-weight: 600;
-}
-
-/* 📦 Afstand tussen knoppen */
+/* 📐 Afstand tussen de knoppen */
 .nav-item {
   margin-bottom: 10px;
 }
 
-/* 🧼 Header & Footer */
+/* 🧁 Stijl voor alle knoppen met paarse tekst en groter font */
+.custom-btn {
+  font-size: 1.2rem;
+  color: purple !important;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+/* 💃 Bounce-animatie bij hover (oneindig) */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.custom-btn:hover {
+  animation: bounce 0.6s ease infinite;
+}
+
+/* 📝 Enquête knop (licht achtergrond met paarse tekst) */
+.btn-light.custom-btn {
+  background-color: #ffffff;
+  color: purple !important;
+}
+
+/* 🧼 Header & Footer styling */
 header, footer {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
