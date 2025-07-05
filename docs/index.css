@@ -1,4 +1,4 @@
-/* 🌈 Achtergrond */
+/* 🌈 Pastel neon achtergrond */
 body {
   margin: 0;
   padding: 0;
@@ -6,76 +6,35 @@ body {
   background: linear-gradient(to bottom left, #FFB1F0, #C2F9FF);
   font-family: 'Lilita One', cursive;
   color: white;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
-/* 🌞 Zonnetje */
-.sun {
+/* 🌞 Zon rechtsboven */
+.zonnetje {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 80px;
-  height: 80px;
+  top: 30px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
   background: radial-gradient(circle, #FFD700, #FFA500);
   border-radius: 50%;
-  box-shadow: 0 0 40px rgba(255, 223, 0, 0.8),
-              -10px 10px 30px rgba(255, 200, 0, 0.5);
-  z-index: 1000;
-  animation: swingSun 4s ease-in-out infinite;
+  z-index: 9999;
+  box-shadow: 
+    0 0 30px rgba(255, 200, 0, 0.7),
+    0 0 60px rgba(255, 200, 0, 0.4);
+  animation: draai 6s linear infinite;
 }
 
-/* 🔄 Zwenkanimatie */
-@keyframes swingSun {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(3deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-3deg); }
+/* ☀️ Draaiende zon */
+@keyframes draai {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* 💥 Lava bubbels */
-.bubble {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #FFEA00;
-  border-radius: 50%;
-  animation: popBubble 5s infinite ease-out;
-  opacity: 0;
-}
-
-/* 🌋 Bubbelanimatie: stijgen + poppen */
-@keyframes popBubble {
-  0% {
-    transform: scale(0.8) translate(0, 0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2) translate(-30px, 40px);
-  }
-  70% {
-    transform: scale(0.6) translate(-60px, 80px);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0) translate(-80px, 100px);
-    opacity: 0;
-  }
-}
-
-/* 🎯 Individuele bubbels */
-.bubble1 { top: 20px; left: -10px; animation-delay: 0s; }
-.bubble2 { top: 10px; left: 80px; animation-delay: 1s; }
-.bubble3 { top: 60px; left: 40px; animation-delay: 2s; }
-.bubble4 { top: 30px; left: 20px; animation-delay: 3s; }
-.bubble5 { top: 45px; left: 70px; animation-delay: 4s; }
-
-/* 📦 Knoppen-container */
+/* 📦 Knoppencontainer */
 .button-container {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 12px;
   box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2);
@@ -94,10 +53,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🌞 Bounce bij hover */
+/* 🕺 Bounce-effect */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50%      { transform: translateY(-6px); }
 }
 
 .custom-btn:hover {
