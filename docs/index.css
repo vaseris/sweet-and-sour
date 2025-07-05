@@ -1,34 +1,41 @@
-/* 🌈 Achtergrond met lichtere neon tinten */
+/* 🌈 Neon pastel achtergrond */
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(to bottom left, #FF85EC, #A3F7FF);
+  background: linear-gradient(to bottom left, #FFB1F0, #C2F9FF);
   font-family: 'Lilita One', cursive;
   color: white;
 }
 
-/* 🔳 Achtergrond voor de knoppencontainer */
+/* 📦 Container achter knoppen */
 .button-container {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-/* 📐 Afstand tussen de knoppen */
-.nav-item {
-  margin-bottom: 10px;
-}
-
-/* 🧁 Stijl voor alle knoppen met paarse tekst en groter font */
+/* 🧁 Knopstijl met paars en glow */
 .custom-btn {
   font-size: 1.2rem;
-  color: purple !important;
   font-weight: 600;
-  transition: transform 0.3s ease;
+  background-color: white;
+  color: #8000c0 !important; /* helder paars */
+  border: none;
+  box-shadow: 0 0 10px rgba(128, 0, 192, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
-/* 💃 Bounce-animatie bij hover (oneindig) */
+/* 💜 Hover glow en bounce effect */
+.custom-btn:hover {
+  animation: bounce 0.6s ease infinite;
+  box-shadow: 0 0 20px rgba(128, 0, 192, 0.6);
+  transform: translateY(-4px);
+}
+
+/* 🏀 Bounce animatie */
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
@@ -36,20 +43,4 @@ body {
   50% {
     transform: translateY(-8px);
   }
-}
-
-.custom-btn:hover {
-  animation: bounce 0.6s ease infinite;
-}
-
-/* 📝 Enquête knop (licht achtergrond met paarse tekst) */
-.btn-light.custom-btn {
-  background-color: #ffffff;
-  color: purple !important;
-}
-
-/* 🧼 Header & Footer styling */
-header, footer {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
 }
