@@ -1,69 +1,34 @@
-/* 🟦 Algemene body stijl */
+/* 🌈 Achtergrond */
 body {
-  min-height: 100vh;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   background: linear-gradient(to bottom left, #FF5EDF, #3DF5FF);
   font-family: Arial, sans-serif;
-  color: #fff;
+  color: white;
 }
 
-/* 🧁 Standaard styling voor buttons */
-.btn {
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+/* 🔳 Container achter knoppen */
+.button-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* 🧁 Knop spacing */
+.nav-item {
+  margin-bottom: 10px;
+}
+
+/* 💬 Enquête knop */
+.btn-light {
+  background-color: #ffffff;
+  color: #1B54D6;
   font-weight: bold;
 }
 
-/* ❤️ Rood (btn-danger) glow */
-.btn-danger:hover {
-  box-shadow: 0 0 15px rgba(255, 87, 87, 0.8),
-              0 0 25px rgba(255, 87, 87, 0.5);
-  transform: translateY(-2px);
-}
-
-/* 🔵 Blauw (btn-primary) glow */
-.btn-primary:hover {
-  box-shadow: 0 0 15px rgba(87, 144, 255, 0.8),
-              0 0 25px rgba(87, 144, 255, 0.5);
-  transform: translateY(-2px);
-}
-
-/* 🟡 Geel (btn-warning) glow */
-.btn-warning:hover {
-  box-shadow: 0 0 15px rgba(255, 222, 89, 0.8),
-              0 0 25px rgba(255, 222, 89, 0.5);
-  transform: translateY(-2px);
-}
-
-/* 💚 Groen (btn-success) glow */
-.btn-success:hover {
-  box-shadow: 0 0 15px rgba(72, 255, 172, 0.8),
-              0 0 25px rgba(72, 255, 172, 0.5);
-  transform: translateY(-2px);
-}
-
-/* 🧁 Cyan/blauw (btn-info) glow */
-.btn-info:hover {
-  box-shadow: 0 0 15px rgba(102, 255, 255, 0.8),
-              0 0 25px rgba(102, 255, 255, 0.5);
-  transform: translateY(-2px);
-}
-
-/* ⚫ Zwart (btn-dark) glow */
-.btn-dark:hover {
-  box-shadow: 0 0 15px rgba(200, 200, 200, 0.6),
-              0 0 25px rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
-}
-
-/* ⚪ Grijs (btn-secondary) glow */
-.btn-secondary:hover {
-  box-shadow: 0 0 15px rgba(189, 189, 189, 0.8),
-              0 0 25px rgba(189, 189, 189, 0.5);
-  transform: translateY(-2px);
-}
-
-/* 🎯 Extra ruimte onder knoppen */
-.nav-item {
-  margin-bottom: 8px;
+/* 🧼 Footer & Header */
+header, footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
