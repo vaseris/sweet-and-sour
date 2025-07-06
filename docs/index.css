@@ -1,39 +1,37 @@
-/* 🌑 Donkerdere pastel-neon achtergrond */
+/* 🌑 Donker pastel-neon achtergrond */
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(to bottom left, #DE8EE0, #5BB2E9);
+  background: linear-gradient(to bottom left, #DA80D6, #4EA5D6);
   font-family: 'Lilita One', cursive;
   color: white;
   overflow: hidden;
   position: relative;
 }
 
-/* 🌞 Zonnetje */
+/* ☀️ Zon rechtsboven, compact en draaibaar */
 .zonnetje {
   position: fixed;
-  top: 10px;    /* dichter bij de rand */
+  top: 10px;
   right: 10px;
-  width: 70px;  /* iets kleiner */
+  width: 70px;
   height: 70px;
   background: radial-gradient(circle, #FFD700, #FFA500);
   border-radius: 50%;
-  z-index: 1000;
-  box-shadow:
-    0 0 30px rgba(255, 200, 0, 0.6),
-    0 0 60px rgba(255, 200, 0, 0.4);
+  box-shadow: 0 0 30px rgba(255, 200, 0, 0.7);
   animation: draaiZon 6s linear infinite;
   overflow: visible;
+  z-index: 1000;
 }
 
-/* 🔄 Zon blijft draaien */
+/* 🔄 Draaiende zon */
 @keyframes draaiZon {
-  0%   { transform: rotate(0deg); }
+  0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* 🫧 Bubbels uit de zon */
+/* 🫧 Bubbels */
 .zonnetje .bubble {
   position: absolute;
   width: 10px;
@@ -41,32 +39,20 @@ body {
   background-color: #FFEA00;
   border-radius: 50%;
   opacity: 0;
-  animation: popBubble 4s ease-out infinite;
+  animation: popBubble 4.5s ease-out infinite;
 }
 
-/* 📍 Startposities en delay voor 1.5s intervallen */
-.bubble1 { top: 20px; left: -10px; animation-delay: 0s; }
+.bubble1 { top: 15px; left: -10px; animation-delay: 0s; }
 .bubble2 { top: 5px;  left: 60px; animation-delay: 1.5s; }
 .bubble3 { top: 40px; left: 10px; animation-delay: 3s; }
-.bubble4 { top: 30px; left: 45px; animation-delay: 4.5s; }
+.bubble4 { top: 25px; left: 45px; animation-delay: 4.5s; }
 
-/* 💥 Pop-animatie */
+/* 💥 Pop-effect bubbels */
 @keyframes popBubble {
-  0% {
-    transform: scale(0.5) translate(0, 0);
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  60% {
-    transform: scale(1.3) translate(-40px, 60px);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0) translate(-80px, 100px);
-    opacity: 0;
-  }
+  0%   { transform: scale(0.5) translate(0, 0); opacity: 0; }
+  15%  { opacity: 1; }
+  60%  { transform: scale(1.2) translate(-40px, 60px); opacity: 1; }
+  100% { transform: scale(0) translate(-80px, 100px); opacity: 0; }
 }
 
 /* 📦 Knoppencontainer */
@@ -77,51 +63,40 @@ body {
   box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* 🧁 Basis knopstijl */
+/* 🧁 Knopstijl met glow en Fredoka One font */
 .custom-btn {
   font-size: 1.2rem;
-  font-family: 'Fredoka One', cursive;  /* speels font voor paarse tekst */
+  font-family: 'Fredoka One', sans-serif;
   font-weight: 600;
-  color: #8000c0 !important;            /* paars */
-  text-shadow: 0 0 8px rgba(128, 0, 192, 0.8);
+  color: #8000c0 !important;
   background-color: white;
+  text-shadow: 0 0 8px rgba(128, 0, 192, 0.9);
+  box-shadow:
+    0 0 12px rgba(128, 0, 192, 0.6),
+    -6px 6px 14px rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  box-shadow:
-    0 0 10px rgba(128, 0, 192, 0.7),
-    -6px 6px 12px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 🕹️ Hover-effect voor gebruikte knoppen */
-.custom-btn:hover:not(.unused-btn) {
-  background-color: inherit;  /* behoud wit om bounce-vrije hover */
-  box-shadow:
-    0 0 20px rgba(128, 0, 192, 0.9),
-    -6px 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* ⚪ Ongebruikte knoppen standaard wit, grijze tekst */
+/* ⚪ Ongebruikte knoppen: wit, neutraal */
 .custom-btn.unused-btn {
-  background-color: white;
   color: #aaa !important;
-  box-shadow: -6px 6px 12px rgba(0,0,0,0.1);
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* 🌈 Ongebruikte knoppen hover: originele kleur */
+/* 🎨 Hover-effect met kleur */
 .custom-btn.unused-btn.btn-success:hover {
   background-color: #198754;
   color: white !important;
-  box-shadow: -6px 6px 16px rgba(0,0,0,0.3);
 }
 .custom-btn.unused-btn.btn-info:hover {
   background-color: #0dcaf0;
   color: white !important;
-  box-shadow: -6px 6px 16px rgba(0,0,0,0.3);
 }
 
-/* 🧼 Header & Footer styling */
+/* 🧼 Header & Footer */
 header, footer {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
