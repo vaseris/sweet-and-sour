@@ -21,23 +21,25 @@
 
   <header class="text-center p-4">
     <h1>Sweet en Sour</h1>
-    <nav>
+    <nav aria-label="Hoofdnavigatie">
       <ul class="nav flex-column align-items-center button-container">
-        <!-- Actieve knoppen -->
-        <li class="nav-item"><a href="/snoepjes" class="btn btn-danger custom-btn bounce-btn mb-2">Producten</a></li>
-        <li class="nav-item"><a href="/over-ons" class="btn btn-primary custom-btn bounce-btn mb-2">Over ons</a></li>
-        <li class="nav-item"><a href="/contact" class="btn btn-warning custom-btn bounce-btn mb-2">Bestelling plaatsen</a></li>
-        <li class="nav-item"><a href="/openingsdagen" class="btn btn-dark custom-btn bounce-btn mb-2">Openingsdagen</a></li>
+        <li class="nav-item"><a href="/snoepjes" class="btn btn-danger custom-btn bounce-btn mb-2" aria-label="Bekijk onze producten">Producten</a></li>
+        <li class="nav-item"><a href="/over-ons" class="btn btn-primary custom-btn bounce-btn mb-2" aria-label="Lees over ons">Over ons</a></li>
+        <li class="nav-item"><a href="/contact" class="btn btn-warning custom-btn bounce-btn mb-2" aria-label="Plaats een bestelling">Bestelling plaatsen</a></li>
+        <li class="nav-item"><a href="/openingsdagen" class="btn btn-dark custom-btn bounce-btn mb-2" aria-label="Bekijk onze openingsdagen">Openingsdagen</a></li>
 
-        <!-- 🔒 Label voor niet beschikbare functies -->
+        <!-- Divider toegevoegd -->
+        <li class="nav-item"><hr class="divider"/></li>
+
+        <!-- 🔒 Label voor passieve functies -->
         <li class="nav-item mt-4">
           <p class="section-label">Nog niet beschikbaar</p>
         </li>
 
         <!-- Passieve knoppen -->
-        <li class="nav-item"><a href="" class="btn custom-btn passive-btn mb-2">Winkelmandje</a></li>
-        <li class="nav-item"><a href="" class="btn custom-btn passive-btn mb-2">Acties (maak een account)</a></li>
-        <li class="nav-item"><a href="" class="btn custom-btn passive-btn mb-2">Aanmelden</a></li>
+        <li class="nav-item"><a href="#" class="btn custom-btn passive-btn mb-2">Winkelmandje</a></li>
+        <li class="nav-item"><a href="#" class="btn custom-btn passive-btn mb-2">Acties (maak een account)</a></li>
+        <li class="nav-item"><a href="#" class="btn custom-btn passive-btn mb-2">Aanmelden</a></li>
       </ul>
     </nav>
   </header>
