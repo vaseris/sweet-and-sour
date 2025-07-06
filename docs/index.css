@@ -1,33 +1,33 @@
-/* 🌑 Donker pastel-neon achtergrond */
+/* 🌈 Donkerdere pastel neon */
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background: linear-gradient(to bottom left, #DA80D6, #4EA5D6);
+  background: linear-gradient(to bottom left, #D16DD1, #4292C9);
   font-family: 'Lilita One', cursive;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
+  min-height: 100vh;
 }
 
-/* ☀️ Zon rechtsboven, compact en draaibaar */
+/* ☀️ Zon nu helemaal in de hoek */
 .zonnetje {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  width: 70px;
-  height: 70px;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
   background: radial-gradient(circle, #FFD700, #FFA500);
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(255, 200, 0, 0.7);
+  box-shadow: 0 0 35px rgba(255, 200, 0, 0.7);
   animation: draaiZon 6s linear infinite;
+  z-index: 9999;
   overflow: visible;
-  z-index: 1000;
 }
 
-/* 🔄 Draaiende zon */
+/* 🔄 Zon draait */
 @keyframes draaiZon {
-  0% { transform: rotate(0deg); }
+  0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
@@ -42,12 +42,11 @@ body {
   animation: popBubble 4.5s ease-out infinite;
 }
 
-.bubble1 { top: 15px; left: -10px; animation-delay: 0s; }
+.bubble1 { top: 20px; left: -10px; animation-delay: 0s; }
 .bubble2 { top: 5px;  left: 60px; animation-delay: 1.5s; }
 .bubble3 { top: 40px; left: 10px; animation-delay: 3s; }
 .bubble4 { top: 25px; left: 45px; animation-delay: 4.5s; }
 
-/* 💥 Pop-effect bubbels */
 @keyframes popBubble {
   0%   { transform: scale(0.5) translate(0, 0); opacity: 0; }
   15%  { opacity: 1; }
@@ -57,33 +56,35 @@ body {
 
 /* 📦 Knoppencontainer */
 .button-container {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255,255,255,0.1);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: -8px 8px 20px rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 10px 30px rgba(255,255,255,0.15);
 }
 
-/* 🧁 Knopstijl met glow en Fredoka One font */
+/* 🧁 Knoppen met extra schaduw en glow */
 .custom-btn {
   font-size: 1.2rem;
   font-family: 'Fredoka One', sans-serif;
   font-weight: 600;
   color: #8000c0 !important;
   background-color: white;
-  text-shadow: 0 0 8px rgba(128, 0, 192, 0.9);
-  box-shadow:
-    0 0 12px rgba(128, 0, 192, 0.6),
-    -6px 6px 14px rgba(0, 0, 0, 0.3);
-  padding: 10px 20px;
+  text-shadow: 
+    0 0 10px rgba(128, 0, 192, 0.9),
+    -2px 2px 4px rgba(0,0,0,0.4);
+  box-shadow: 
+    0 0 20px rgba(128, 0, 192, 0.6),
+    -8px 8px 16px rgba(0,0,0,0.4);
   border: none;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ⚪ Ongebruikte knoppen: wit, neutraal */
+/* ⚪ Ongebruikte knoppen wit en neutraal */
 .custom-btn.unused-btn {
   color: #aaa !important;
-  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: -4px 4px 10px rgba(0,0,0,0.2);
 }
 
 /* 🎨 Hover-effect met kleur */
@@ -98,7 +99,8 @@ body {
 
 /* 🧼 Header & Footer */
 header, footer {
-  background-color: rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  box-shadow: -6px 6px 20px rgba(255, 255, 255, 0.2);
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: -8px 8px 28px rgba(255, 255, 255, 0.2);
 }
+
