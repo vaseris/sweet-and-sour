@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(to bottom left, #c62e2e, #254886); 
+  background: linear-gradient(to bottom left, #cd2121, #295bb3); 
   font-family: 'Lilita One', cursive;
   color: white;
   overflow-x: hidden;
@@ -37,18 +37,18 @@ body {
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
-  box-shadow: -6px 6px 12px rgba(0,0,0,0.25);
+  box-shadow: -6px 6px 12px rgba(70, 69, 69, 0.292);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .custom-btn:not(.passive-btn) {
-  color: #9900cc !important; /* zachtere paars */
+  color: #8c03b9 !important;
   text-shadow:
-    0 0 10px rgba(153, 0, 204, 0.8),
+    0 0 10px rgba(165, 2, 219, 0.8),
     -2px 2px 6px rgba(0,0,0,0.3);
   box-shadow:
     0 0 16px rgba(153, 0, 204, 0.3),
-    -6px 6px 18px rgba(0,0,0,0.3);
+    -6px 6px 18px rgba(116, 97, 116, 0.3);
 }
 
 @keyframes bounce {
