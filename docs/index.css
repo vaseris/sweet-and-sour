@@ -2,62 +2,11 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(to bottom left, #D22F8C, #1C3A6D); /* iets lichtere achtergrond */
+  background: linear-gradient(to bottom left, #D22F8C, #1C3A6D); 
   font-family: 'Lilita One', cursive;
   color: white;
   overflow-x: hidden;
   position: relative;
-}
-
-.zonnetje {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle, #FFD700, #FFA500);
-  border-radius: 50%;
-  box-shadow: 0 0 35px rgba(255, 200, 0, 0.7);
-  animation: draaiZon 6s linear infinite;
-  z-index: 9999;
-  overflow: visible;
-}
-
-.zonnetje:hover {
-  animation: pulse 1.2s ease infinite;
-}
-
-@keyframes draaiZon {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes pulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.15); }
-  100% { transform: scale(1); }
-}
-
-.zonnetje .bubble {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #FFEA00;
-  border-radius: 50%;
-  opacity: 0;
-  animation: popBubble 4.5s ease-out infinite;
-}
-
-.bubble1 { top: 20px; left: -10px; animation-delay: 0s; }
-.bubble2 { top: 5px;  left: 60px; animation-delay: 1.5s; }
-.bubble3 { top: 40px; left: 10px; animation-delay: 3s; }
-.bubble4 { top: 25px; left: 45px; animation-delay: 4.5s; }
-
-@keyframes popBubble {
-  0%   { transform: translate(0, 0) scale(0.5); opacity: 0; }
-  15%  { opacity: 1; }
-  60%  { transform: translate(-20px, 80px) scale(1.2); opacity: 1; }
-  100% { transform: translate(-40px, 160px) scale(0); opacity: 0; }
 }
 
 .button-container {
